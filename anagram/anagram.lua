@@ -1,4 +1,4 @@
-local function strToArray(str)
+local function str_to_array(str)
   local arr = {}
 
   for i=1,#str do
@@ -8,7 +8,7 @@ local function strToArray(str)
   return arr
 end
 
-local function isAnagram(str1, str2)
+local function is_anagram(str1, str2)
   if #str1 ~= #str2 then
     return false
   end
@@ -16,8 +16,8 @@ local function isAnagram(str1, str2)
   str1 = string.lower(str1)
   str2 = string.lower(str2)
 
-  arr1 = strToArray(str1)
-  arr2 = strToArray(str2)
+  arr1 = str_to_array(str1)
+  arr2 = str_to_array(str2)
 
   table.sort(arr1)
   table.sort(arr2)
@@ -45,7 +45,7 @@ function Anagram:match(candidates)
   local matches = {}
 
   for k,v in pairs(candidates) do
-    if isAnagram(self.word, v) then
+    if is_anagram(self.word, v) then
       matches[#matches+1] = v
     end
   end

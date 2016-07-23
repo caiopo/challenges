@@ -1,4 +1,4 @@
-local function strToArray(str)
+local function str_to_array(str)
   local arr = {}
 
   for i=1,#str do
@@ -9,7 +9,7 @@ local function strToArray(str)
 end
 
 function Octal(str)
-  local arr = strToArray(str)
+  local arr = str_to_array(str)
   local decimal = 0
 
   for i,v in ipairs(arr) do

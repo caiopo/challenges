@@ -1,4 +1,4 @@
-local function binarySearch(array, element)
+local function binary_search(array, element)
   if #array == 0 then return -1 end
 
   local lo = 1
@@ -21,4 +21,4 @@ local function binarySearch(array, element)
   return -1
 end
 
-return binarySearch
+return binary_search
