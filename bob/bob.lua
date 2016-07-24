@@ -1,8 +1,8 @@
-local function isQuestion(phrase)
+local function is_question(phrase)
   return phrase:sub(#phrase,#phrase) == '?'
 end
 
-local function isYelling(phrase)
+local function is_yelling(phrase)
   for i=1,#phrase do
     local c = phrase:sub(i,i)
 
@@ -16,9 +16,9 @@ end
 local function hey(phrase)
   if phrase == '' then return 'Fine, be that way.' end
 
-  if isQuestion(phrase) then return 'Sure' end
+  if is_question(phrase) then return 'Sure' end
 
-  if isYelling(phrase) then return 'Whoa, chill out!' end
+  if is_yelling(phrase) then return 'Whoa, chill out!' end
 
   return 'Whatever'
 end
