@@ -1,4 +1,4 @@
-function aliquot_sum(number)
+local function aliquot_sum(number)
   local sum = 0
 
   for i=1,number-1 do
@@ -10,7 +10,7 @@ function aliquot_sum(number)
   return sum
 end
 
-function classify(number)
+local function classify(number)
   local asum = aliquot_sum(number)
 
   if asum == number then

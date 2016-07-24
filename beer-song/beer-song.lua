@@ -8,13 +8,13 @@ local zero = 'No more bottles of beer on the wall, no more bottles of beer.\n' .
   'Go to the store and buy some more, 99 bottles of beer on the wall.\n'
 
 
-function other(n)
+local function other(n)
   return n .. ' bottles of beer on the wall, ' .. n ..
     ' bottles of beer.\nTake one down and pass it around, '
     .. (n-1) .. ' bottles of beer on the wall.\n'
 end
 
-function verse(n)
+local function verse(n)
   if n == 0 then
     return zero
   elseif n == 1 then
@@ -25,7 +25,7 @@ function verse(n)
   return other(n)
 end
 
-function sing(from, to)
+local function sing(from, to)
   if not to then to = 0 end
 
   local song = verse(from)

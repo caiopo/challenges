@@ -1,4 +1,4 @@
-function transform(old)
+local function transform(old)
   local new = {}
 
   for i,v in pairs(old) do
