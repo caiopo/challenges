@@ -1,4 +1,4 @@
-function accumulate(old, func)
+return function(old, func)
   local new = {}
 
   for i = 1, #old do
@@ -7,5 +7,3 @@ function accumulate(old, func)
 
   return new
 end
-
-return accumulate

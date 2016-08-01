@@ -1,4 +1,4 @@
-function compute(dna1, dna2)
+local function compute(dna1, dna2)
   local distance = 0
 
   for i = 1,#dna1 do

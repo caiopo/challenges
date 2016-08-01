@@ -3,14 +3,7 @@ local function is_question(phrase)
 end
 
 local function is_yelling(phrase)
-  for i=1,#phrase do
-    local c = phrase:sub(i,i)
-
-    if c ~= string.upper(c) then
-      return false
-    end
-  end
-  return true
+  return phrase == phrase:upper()
 end
 
 local function hey(phrase)
