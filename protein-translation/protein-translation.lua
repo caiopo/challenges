@@ -47,6 +47,7 @@ local function rna_strand(rna)
 
     proteins[#proteins+1] = prot
 
+    -- increment i to find next protein
     i = i + 3
   end
 

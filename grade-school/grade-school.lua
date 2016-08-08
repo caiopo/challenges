@@ -1,4 +1,4 @@
-School = {}
+local School = {}
 School.__index = School
 
 function School:new()

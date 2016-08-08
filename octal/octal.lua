@@ -8,7 +8,7 @@ local function str_to_array(str)
   return arr
 end
 
-function Octal(str)
+local function Octal(str)
   local arr = str_to_array(str)
   local decimal = 0
 

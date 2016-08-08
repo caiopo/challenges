@@ -1,37 +1,22 @@
-local function str_to_array(str)
+local function sort_string(str)
+  str = string.lower(str)
+
   local arr = {}
 
   for i=1,#str do
     arr[i] = str:sub(i,i)
   end
 
-  return arr
+  table.sort(arr)
+
+  return table.concat(arr)
 end
 
 local function is_anagram(str1, str2)
-  if #str1 ~= #str2 then
-    return false
-  end
-
-  str1 = string.lower(str1)
-  str2 = string.lower(str2)
-
-  arr1 = str_to_array(str1)
-  arr2 = str_to_array(str2)
-
-  table.sort(arr1)
-  table.sort(arr2)
-
-  for i=1,#arr1 do
-    if arr1[i] ~= arr2[i] then
-      return false
-    end
-  end
-
-  return true
+  return sort_string(str1) == sort_string(str2)
 end
 
-Anagram = {}
+local Anagram = {}
 Anagram.__index = Anagram
 
 function Anagram:new(word)

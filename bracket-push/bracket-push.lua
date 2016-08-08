@@ -34,7 +34,7 @@ local function str_to_array(str)
   return arr
 end
 
-matching = {
+local matching = {
   ['('] = ')',
   ['{'] = '}',
   ['['] = ']',
