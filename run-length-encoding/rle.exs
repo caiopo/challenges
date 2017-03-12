@@ -12,7 +12,7 @@ defmodule RunLengthEncoder do
     |> Enum.map(fn [chars, letter] ->
         Integer.to_string(String.length(chars)) <> letter
       end)
-    |> Enum.join("")
+    |> Enum.join
   end
 
   @spec decode(String.t) :: String.t
@@ -22,6 +22,6 @@ defmodule RunLengthEncoder do
         {n, _} = Integer.parse(number)
         String.duplicate(letter, n)
       end)
-    |> Enum.join("")
+    |> Enum.join
   end
 end

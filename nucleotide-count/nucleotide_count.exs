@@ -1,6 +1,4 @@
 defmodule NucleotideCount do
-  @nucleotides [?A, ?C, ?G, ?T]
-
   @doc """
   Counts individual nucleotides in a NucleotideCount strand.
 
