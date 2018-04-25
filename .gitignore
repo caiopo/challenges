@@ -1,3 +1,40 @@
+
+# Created by https://www.gitignore.io/api/lua,elixir,haskell
+
+### Elixir ###
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+
+### Elixir Patch ###
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+.HTF/
+
+### Lua ###
 # Compiled Lua sources
 luac.out
 
@@ -7,7 +44,6 @@ luac.out
 *.tar.gz
 
 # Object files
-*.o
 *.os
 *.ko
 *.obj
@@ -38,3 +74,7 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
+
+
+
+# End of https://www.gitignore.io/api/lua,elixir,haskell
