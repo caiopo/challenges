@@ -1,0 +1,6 @@
+resolver: lts-16.24
+packages:
+- .
+
+extra-deps:
+- split-0.2.3.4

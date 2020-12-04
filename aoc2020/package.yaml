@@ -1,0 +1,20 @@
+name:                aoc2020
+version:             0.1.0.0
+github:              "caiopo/aoc2020"
+license:             MIT
+author:              "Caio Pereira Oliveira"
+maintainer:          "caiopoliveira@gmail.com"
+copyright:           "2020 Caio Pereira Oliveira"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/caiopo/aoc2020#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- split
+
+library:
+  source-dirs: src
+

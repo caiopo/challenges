@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           aoc2020
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/caiopo/aoc2020#readme>
+homepage:       https://github.com/caiopo/aoc2020#readme
+bug-reports:    https://github.com/caiopo/aoc2020/issues
+author:         Caio Pereira Oliveira
+maintainer:     caiopoliveira@gmail.com
+copyright:      2020 Caio Pereira Oliveira
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/caiopo/aoc2020
+
+library
+  exposed-modules:
+      Day01
+      Day02
+  other-modules:
+      Paths_aoc2020
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , split
+  default-language: Haskell2010
