@@ -21,9 +21,32 @@ parseLine line =
         [numbers, _letter] = splitOn " " prefix
         [_min, _max] = splitOn "-" numbers
 
+
+countLetter :: Char -> String -> Int
+countLetter letter string = length $ filter (== letter) string
+
+
+validatePassword1 :: Password -> Bool
+validatePassword1 password =
+    minRepeats password <= count && count <= maxRepeats password
+    where
+        count = countLetter (letter password) (content password)
+
+
+validatePassword2 :: Password -> Bool
+validatePassword2 password =
+    _letter == letter1 && _letter /= letter2 || _letter /= letter1 && _letter == letter2
+    where
+        _content = content password
+        _letter = letter password
+        letter1 = _content !! (minRepeats password - 1)
+        letter2 = _content !! (maxRepeats password - 1)
+
+
 main :: IO ()
 main = do 
     input <- readFile "inputs/day02.txt"
     let passwords = map parseLine $ lines input
-    print passwords
+    print $ length $ filter validatePassword1 passwords
+    print $ length $ filter validatePassword2 passwords
 
