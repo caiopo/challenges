@@ -4,10 +4,18 @@
 (defn parse-int [s]
   (Integer/parseInt (re-find #"\A-?\d+" s)))
 
+(defn get-lines-input
+  [file]
+  (->> file io/resource slurp str/split-lines))
+
 (defn get-int-list-input
   [file]
-  (->> file io/resource slurp str/split-lines (map parse-int)))
+  (->> file get-lines-input (map parse-int)))
 
 (defn sum
   [input]
   (reduce + 0 input))
+
+(defn product
+  [input]
+  (reduce * 1 input))
